@@ -17,7 +17,7 @@ public class BoxDance
 	// Update is called once per frame
 	void Update ()
 	{
-		fSlerpValue += Time.deltaTime / 10.0f;
+		fSlerpValue += Time.deltaTime / 3.0f;
 		if ( fSlerpValue > 1.0f )
 		{
 			fSlerpValue = 1.0f;
