@@ -4,9 +4,9 @@ using System.Collections;
 public class BoxDance
 	: MonoBehaviour
 {
-	private float 		fSlerpValue 		= 0.0f;
-	private Quaternion 	quatInitialRotation	= Quaternion.identity;
-	private Quaternion 	quatTargetRotation 	= Quaternion.identity;
+	public float 		fSlerpValue 		= 0.0f;
+	public Quaternion 	quatInitialRotation	= Quaternion.identity;
+	public Quaternion 	quatTargetRotation 	= Quaternion.identity;
 	
 	// Use this for initialization
 	void Start ()
@@ -26,7 +26,7 @@ public class BoxDance
 		}
 		else
 		{
-			transform.rotation = Quaternion.Lerp( quatInitialRotation, quatTargetRotation, fSlerpValue );
+			transform.rotation = Quaternion.Slerp( quatInitialRotation, quatTargetRotation, fSlerpValue );
 		}
 	}
 	
